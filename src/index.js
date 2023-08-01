@@ -12,12 +12,12 @@ const {
   toolWidthChangeEvent
 } = constants;
 
-const TaffyWrapper = ({ children }) => {
+const TaffyWrapper = ({ defaultWidth = "100%", children }) => {
 
   let isMounted = false;
   const channel = addons.getChannel();
   const wrapperEl = useRef(null);
-  const [wrapperWidth, setWrapperWidth] = useState('100%');
+  const [wrapperWidth, setWrapperWidth] = useState(defaultWidth);
   useLayoutEffect(() => {
     isMounted = true;
     if (wrapperEl && wrapperEl.current) {
@@ -97,15 +97,14 @@ const TaffyWrapper = ({ children }) => {
   );
 };
 
-export const withTaffy = makeDecorator({
-  name: 'withTaffy',
-  allowDeprecatedUsage: false,
-  wrapper: (getStory, context) => {
-    const story = getStory(context);
-    return (
-      <TaffyWrapper>
-        {story}
-      </TaffyWrapper>
-    );
-  }
-});
+export const withTaffy = (Story) => (
+  <TaffyWrapper>
+    <Story />
+  </TaffyWrapper>
+);
+
+export const withTaffyDefault = (defaultWidth) => (Story) => (
+  <TaffyWrapper defaultWidth={defaultWidth}>
+    <Story />
+  </TaffyWrapper>
+);
