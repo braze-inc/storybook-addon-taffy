@@ -1,4 +1,4 @@
-import { types } from '@storybook/addons';
+import { types } from '@storybook/manager-api';
 const addonId = 'taffy';
 
 export default {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addons } from '@storybook/addons';
+import { addons } from '@storybook/manager-api';
 import { useChannel } from '@storybook/api';
 // import { styled, Global, Theme, withTheme } from '@storybook/theming';
 import { Button, Separator } from '@storybook/components';

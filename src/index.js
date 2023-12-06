@@ -1,6 +1,5 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
-import { makeDecorator } from '@storybook/addons';
-import { addons } from '@storybook/addons';
+import { addons } from '@storybook/manager-api';
 import { Resizable } from 're-resizable';
 import constants from './constants';
 
