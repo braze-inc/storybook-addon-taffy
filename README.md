@@ -37,3 +37,6 @@ addDecorator(withTaffy);
 ```
 
 That's it! Restart your Storybook build, and you should see Taffy controls in the toolbar, as well as a resize handle on the right side of your story previews.
+
+#### How do I make the compressed tarball again?
+Silly programmer, it's `yarn pack`
