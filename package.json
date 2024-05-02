@@ -1,11 +1,11 @@
 {
-  "name": "@degjs/storybook-addon-taffy",
-  "version": "1.0.5",
+  "name": "@braze/storybook-addon-taffy",
+  "version": "2.0.0",
   "description": "A responsive viewport addon for Storybook",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DEGJS/storybook-addon-taffy.git"
+    "url": "git+https://github.com/braze-inc/storybook-addon-taffy.git"
   },
   "keywords": [
     "storybook",
@@ -15,20 +15,29 @@
     "storybook-addon",
     "style"
   ],
-  "author": {
+  "authors": [
+    {
     "name": "Aaron Ladage",
     "email": "aladage@degdigital.com"
-  },
+    },
+    {
+      "name": "Chris Garber",
+      "email": "christopher.garber@braze.com"
+    }
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DEGJS/storybook-addon-taffy/issues"
+    "url": "https://github.com/braze-inc/storybook-addon-taffy/issues"
   },
-  "homepage": "https://github.com/DEGJS/storybook-addon-taffy#readme",
+  "homepage": "https://github.com/braze-inc/storybook-addon-taffy#readme",
   "files": [
     "dist/**/*",
     "README.md",
     "*.js"
   ],
+  "peerDependencies": {
+    "@storybook/manager-api": "^7.0.0"
+  },
   "scripts": {
     "compile": "rimraf dist/* && babel src -d dist",
     "prepublish": "npm run compile"

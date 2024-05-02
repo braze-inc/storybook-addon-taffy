@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { addons } from '@storybook/manager-api';
-import { useChannel } from '@storybook/api';
+import { addons, useChannel } from '@storybook/manager-api';
 // import { styled, Global, Theme, withTheme } from '@storybook/theming';
 import { Button, Separator } from '@storybook/components';
 import { getArrayItemByValue, getEmFromPx, getPxFromEm, getRandomVal } from './utils';
